@@ -13,7 +13,7 @@
 
 			<v-divider></v-divider>
 
-			<v-stepper-step step="3">Draw Winners</v-stepper-step>
+			<v-stepper-step step="3">Winners</v-stepper-step>
 		</v-stepper-header>
 
 		<v-stepper-items>
@@ -40,7 +40,9 @@
 			</v-stepper-content>
 
 			<v-stepper-content step="3">
-				<v-card class="mb-12" height="200px"></v-card>
+				<v-card class="mb-12" >
+                    <Winner/>
+                </v-card>
 
 				<v-btn color="primary" @click="e1 = 1">
 					Continue
@@ -54,10 +56,12 @@
 
 <script>
 import Post from "@/components/Post"
+import Winner from "@/components/Winner"
 	export default {
         name:"Stepper",
         components:{
-            Post
+            Post,
+            Winner
         },
         data:()=>({
             e1:1
