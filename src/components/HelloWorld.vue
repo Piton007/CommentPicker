@@ -87,6 +87,7 @@
           </a>
         </v-row>
       </v-col>
+      <button @click="send"></button>
     </v-row>
   </v-container>
 </template>
@@ -94,7 +95,6 @@
 <script>
   export default {
     name: 'HelloWorld',
-
     data: () => ({
       ecosystem: [
         {

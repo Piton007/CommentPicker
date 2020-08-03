@@ -4,53 +4,32 @@
       app
       color="primary"
       dark
+
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>fa-external-link</v-icon>
-      </v-btn>
+      Comment Picker
     </v-app-bar>
-
     <v-main>
-      <HelloWorld/>
+      <v-container fluid>
+        <stepper/>
+      </v-container>
     </v-main>
+    <v-footer app>
+      <div class="footer">
+        Copyright&#169; 2020 
+      </div>
+     
+  </v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Stepper from './components/Stepper';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    "stepper":Stepper,
   },
 
   data: () => ({
@@ -58,3 +37,9 @@ export default {
   }),
 };
 </script>
+<style scoped>
+  .footer {
+    width: 100%;
+    text-align: center !important;
+  }
+</style>
